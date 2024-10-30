@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>GradientIQ - Prediction Result</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">GradientIQ</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://chat.whatsapp.com/DGktqh4NA3d4qRkgURRV0j" target="_blank">Contact</a></li>
+                <li><a href="#">Predict</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <h1>Prediction Results</h1>
+
+        <div class="result-container">
+            <h2>Predicted SGPA: {{ predicted_cgpa }}</h2>
+            <h2>Predicted Grade: {{ predicted_grade }}</h2> 
+            <h3> {{ recommendation }}</h3>
+
+            <h3>Input Data:</h3>
+            <ul>
+                <li>Age: {{ form_data.age }}</li>
+                <li>Gender: {{ form_data.gender }}</li>
+                <li>Parental Education: {{ form_data.parental_education }}</li>
+                <li>Study Time Weekly: {{ form_data.study_time_weekly }}</li>
+                <li>Absences: {{ form_data.absences }}</li>
+                <li>Tutoring: {{ form_data.tutoring }}</li>
+                <li>Parental Support: {{ form_data.parental_support }}</li>
+                <li>Extracurricular: {{ form_data.extracurricular }}</li>
+                <li>Sports: {{ form_data.sports }}</li>
+            </ul>
+
+            <h3>Pie Chart of Input Data:</h3>
+            <img src="{{ graph_url }}" alt="Pie chart of input data" />            
+
+            <h3>Comparison of Recommended vs Actual Study Time:</h3>
+            <img src="{{ comparison_graph_url }}" alt="Comparison of recommended and actual study time" />
+
+            <h3>Suggestions for Improvement:</h3>
+            <ul>
+                {% for suggestion in suggestions %}
+                    <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

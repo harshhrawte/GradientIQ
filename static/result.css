@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('99.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #343a40;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #34495e;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1e8449;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.result-container {
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+    background-image: url('pppp.jpg');
+    text-align: left;
+}
+
+.result-container h2 {
+    margin-bottom: 15px;
+    color: #28a745;
+    font-size: 1.8em;
+}
+
+.result-container h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #767e7e;
+    font-size: 1.2em;
+}
+
+.result-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-container ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-container ul li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .result-container h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .result-container h2 {
+        font-size: 1.2em;
+    }
+}

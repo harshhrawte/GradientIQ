@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='first_styles.css') }}">
+    <title>GradientIQ - Empowering Student Success</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">GradientIQ</div>
+        <div class="tagline">Empowering Student Success</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Predict</a></li>
+                <li><a href="https://chat.whatsapp.com/DGktqh4NA3d4qRkgURRV0j" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to GradientIQ</h1>
+            <p>Your partner in predicting student performance.</p>
+        </div>
+        <img class="hero-image" src="{{ url_for('static', filename='college-students-studying-while-sitting-at-table-by-window-in-classroom-CAVF39238.jpg') }}" alt="Student Image">
+    </section>
+
+   
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At GradientIQ, we specialize in predicting student performance using advanced machine learning models. Our goal is to help educational institutions and students gain insights into their academic journeys, ensuring they achieve their full potential.</p>
+        <div class="about-images">
+            <img src="{{ url_for('static', filename='Screenshot 2024-10-17 010838.png') }}" alt="About Image 1">
+            <img src="{{ url_for('static', filename='Screenshot 2024-10-17 002951.png') }}" alt="About Image 2">
+        </div>
+    </section>
+
+    <section class="objectives">
+        <h2>Our Objectives</h2>
+        <p>1. Provide accurate predictions of student performance.</p>
+        <p>2. Assist faculty in understanding student progress.</p>
+        <p>3. Support students in their learning journey.</p>
+    </section>
+
+    <section class="future-scope">
+        <div class="future-scope-content">
+            <img src="{{ url_for('static', filename='Screenshot 2024-10-17 011235.png') }}" alt="Future Scope Image">
+            <div class="future-scope-text">
+                <h2>Future Scope</h2>
+                <p>GradientIQ aims to expand its capabilities to offer personalized learning recommendations based on student performance data, enhancing the educational experience for both students and educators.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, reach us at:</p>
+        <p>Email: gradientiq@gmail.com</p>
+        <p>Phone: +91-7045301344</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://chat.whatsapp.com/DGktqh4NA3d4qRkgURRV0j" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GradientIQ. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
