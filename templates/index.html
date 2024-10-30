@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>GradientIQ - Student Performance Prediction And Analysis</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GradientIQ</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('ok') }}">Home</a></li>
+                <li><a href="https://chat.whatsapp.com/DGktqh4NA3d4qRkgURRV0j" target="_blank">Contact</a></li>
+                <li><a href="{{ url_for('home') }}">Predict</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bg"></div> 
+    
+    <div class="main-container">
+       
+        <div class="form-container">
+            <h1>Predict Your SGPA & Grade</h1>
+            <form method="post" action="/predict"> 
+                <label for="age">Age:</label>
+                <input type="number" name="age" value="{{ form_data.get('age', '') }}" min="15" max="50" required>                
+    
+                <label for="gender">Gender (0 for Female, 1 for Male):</label>
+                <input type="number" name="gender" value="{{ form_data.get('gender', '') }}" required>
+
+                <label for="parental_education">Parental Education (0 for 10th pass , 1 for 12th pass , 2 for Bachelors , 3 for Masters , 4 for Phd):</label>
+                <input type="number" name="parental_education" value="{{ form_data.get('parental_education', '') }}" required>
+
+                <label for="study_time_weekly">Study Time Weekly (in hours):</label>
+                <input type="number" step="0.1" name="study_time_weekly" value="{{ form_data.get('study_time_weekly', '') }}" min="0" max="168" required>
+
+                <label for="absences">Absences(In a single Semester):</label>
+                <input type="number" name="absences" value="{{ form_data.get('absences', '') }}" min="0" required>
+
+                <label for="tutoring">Tutoring (0 for No, 1 for Yes):</label>
+                <input type="number" name="tutoring" value="{{ form_data.get('tutoring', '') }}" min="0" max="1"required>
+
+                <label for="parental_support">Parental Support (0 for Poor , 1 for Average , 2 for Good , 3 for Great , 4 for Excellent):</label>
+                <input type="number" name="parental_support" value="{{ form_data.get('parental_support', '') }}" min="0" max="4" required>
+
+                <label for="extracurricular">Extracurricular (0 for No, 1 for Yes):</label>
+                <input type="number" name="extracurricular" value="{{ form_data.get('extracurricular', '') }}" min="0" max="1"required>
+
+                <label for="sports">Sports (0 for No, 1 for Yes):</label>
+                <input type="number" name="sports" value="{{ form_data.get('sports', '') }}" min="0" max="1"required>
+
+                <button type="submit">Predict</button>
+            </form>
+
+            {% if predicted_cgpa is not none %} 
+                <div class="result">
+                    <h2>Predicted CGPA: {{ predicted_cgpa }}</h2>
+                    <h2>Predicted Grade: {{ predicted_grade if predicted_grade is not none else 'N/A' }}</h2> 
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="right-container">
+            <h2>Student Performance Prediction</h2>
+            <img src="{{ url_for('static', filename='4.jpeg') }}" alt="Happy Student">
+        </div>
+    </div>
+</body>
+
+</html>
