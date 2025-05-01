@@ -126,5 +126,3 @@ def create_comparison_graph(study_time_weekly):
 
     return 'data:image/png;base64,{}'.format(chart_url)
 
-if __name__ == '__main__':
-    app.run(debug=True)
