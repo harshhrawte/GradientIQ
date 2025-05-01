@@ -25,7 +25,7 @@
         <h1>Prediction Results</h1>
 
         <div class="result-container">
-            <h2>Predicted SGPA: {{ predicted_cgpa }}</h2>
+            <h2>Predicted SGPA: {{ predicted_cgpa | round(2) }}</h2>
             <h2>Predicted Grade: {{ predicted_grade }}</h2> 
             <h3> {{ recommendation }}</h3>
 

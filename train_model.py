@@ -8,7 +8,7 @@ data = pd.read_csv(r'C:\Harsh\Desktop\GradientIQ\Student Dataset.csv')
 data = data.drop(columns=['Unnamed: 13', 'Unnamed: 14', 'Ethnicity'], errors='ignore')
 
 def calculate_cgpa_penalty(absences): 
-    penalty = (absences // 10) * 0.011
+    penalty = (absences // 15) * 0.01
     return penalty
 
 data['CGPAPenalty'] = data['Absences'].apply(calculate_cgpa_penalty)
