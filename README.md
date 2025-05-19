@@ -6,7 +6,7 @@ GradientIQ is a Machine Learning project that evaluates factors such as study ho
 
 ## 💡 Key Features
 
-- **High-Accuracy Predictions:** Delivers SGPA insights with 98% accuracy.
+- **High-Accuracy Predictions:** Delivers SGPA insights with 95% accuracy.
 - **Visual Analysis:** Provides a pie chart of input data and a comparison graph showing recommended study time (min. 15 hours) vs. actual study time, helping students set study goals for success.
 - **Personalized Feedback:** Offers guidance on areas for improvement, such as:
   - Increase your study time to at least 12 to 15 hours per week for a decent SGPA (study hours include college assignments, self-study, and any college-related tasks or homework).
